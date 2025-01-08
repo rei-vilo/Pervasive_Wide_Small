@@ -1,6 +1,4 @@
-// !!! To be adapted
-
-# Pervasive Displays Library Suite - Driver for screens with colour black-white-red-yellow
+# Pervasive Displays Library Suite - Driver for screens with black-white
 
 The driver is specifically designed for the [Pervasive Displays](https://www.pervasivedisplays.com) e-paper screens, extension boards and evaluation kits.
 
@@ -8,7 +6,7 @@ The driver is specifically designed for the [Pervasive Displays](https://www.per
 
 The **Driver_EPD_BWRY_Small** supports the screens
 
-* Pervasive Displays iTC colour [black-white-red-yellow](https://www.pervasivedisplays.com/products/?_sft_product_colour=black-white-red-yellow) screens (film `Q`) with sizes of 1.54, 2.13 and 2.66";
+* Pervasive Displays iTC colour [black-white](https://www.pervasivedisplays.com/products/?_sft_product_colour=black-white-red-yellow) screens (film `K`) with sizes of 1.52", 1.54", 2.13", 2.66", 2.71", 2.9", 3.70", 4.2" and 4.37";
 
 the boards
 
@@ -27,7 +25,7 @@ The driver library can be used stand-alone or with the [Pervasive Displays Libra
 
 ## Documentation
 
-* [Application Note Small Size for Spectra 4](https://www.pervasivedisplays.com/wp-content/uploads/2023/02/ApplicationNote_Spectra_4_smallSize_EPD_v01_20230522.pdf)
+* [Application Note for Small Size Wide Temp](https://www.pervasivedisplays.com/wp-content/uploads/2023/02/ApplicationNote_Spectra_4_smallSize_EPD_v01_20230522.pdf)
 * [Wiki](https://docs.pervasivedisplays.com/) 
 * [Pervasive Displays, Inc. (龍亭新技股份有限公司)](https://www.pervasivedisplays.com/)
 * [Product line](https://www.pervasivedisplays.com/products/)
@@ -62,7 +60,7 @@ Hardware
 
 * Pervasive Displays EPD Extension Kit Gen 3 (EXT3 or EXT3.1)
 * Pervasive Displays EPD Extension Kit Gen 4 (EXT4)
-* Pervasive Displays iTC black-white-red-yellow colour screens (film `Q`)
+* Pervasive Displays iTC black-white wide temperature screens (film `K`)
 
 ## Licence
 
