@@ -1,16 +1,15 @@
 ///
 /// @file Pervasive_Wide_Small.h
-/// @brief Driver for small screens
+/// @brief Driver for small screens with wide temperature and embedded fast update
 ///
 /// @details Project Pervasive Displays Library Suite
 /// @n Based on highView technology
-
 ///
 /// @author Rei Vilo
-/// @date 21 Nov 2024
-/// @version 900
+/// @date 21 Jan 2025
+/// @version 902
 ///
-/// @copyright (c) Rei Vilo, 2010-2024
+/// @copyright (c) Pervasive Displays, 2010-2025
 /// @copyright All rights reserved
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
@@ -32,7 +31,6 @@
 /// * Documentation
 /// @n All rights reserved
 ///
-// !!! Application notes moved here
 /// @see Application notes
 /// * [Application Note for 1.52" of wide temperature EPDs](https://www.pervasivedisplays.com/wp-content/uploads/2023/12/ApplicationNote_1.52-inch_wide-Temperature_EPD_v01_20231225_A.pdf)
 /// * [Application Note for small sizes of wide temperature EPDs](https://www.pervasivedisplays.com/wp-content/uploads/2023/02/ApplicationNote_Small_Size_wide-Temperature_EPD_v03_20231031_B.pdf)
@@ -41,8 +39,8 @@
 // SDK and configuration
 #include "PDLS_Common.h"
 
-#if (PDLS_COMMON_RELEASE < 900)
-#error Required PDLS_COMMON_RELEASE 900
+#if (PDLS_COMMON_RELEASE < 902)
+#error Required PDLS_COMMON_RELEASE 902
 #endif // PDLS_COMMON_RELEASE
 
 // Driver
@@ -52,28 +50,28 @@
 ///
 /// @brief Library release number
 ///
-#define DRIVER_WIDE_SMALL_RELEASE 901
+#define DRIVER_WIDE_SMALL_RELEASE 902
 
-/// @name Monochrome screens with embedded fast update and wide temperature
-/// @note Normal and fast update modes
-/// @see https://www.pervasivedisplays.com/products/?_sft_etc_itc=pu+itc&_sft_temperature_range=m15c-to-p60c
+///
+/// @name List of supported screens
+/// @details Wide temperature and embedded fast update
+///
+/// @note Normal and fast update
+/// @see https://www.pervasivedisplays.com/products-e-ink-display/?_sft_etc_itc=pu%20itc&_sft_temperature_range=m15c-to-p60c
 /// @{
 ///
-#define eScreen_EPD_150_KS_0J SCREEN(SIZE_150, FILM_K, DRIVER_J) ///< reference xE2150KS0Jx
-#define eScreen_EPD_152_KS_0J SCREEN(SIZE_152, FILM_K, DRIVER_J) ///< reference xE2152KS0Jx
-#define eScreen_EPD_154_KS_0C SCREEN(SIZE_154, FILM_K, DRIVER_C) ///< reference xE2154KS0Cx
-#define eScreen_EPD_206_KS_0E SCREEN(SIZE_206, FILM_K, DRIVER_E) ///< reference xE2206KS0Ex
-#define eScreen_EPD_213_KS_0E SCREEN(SIZE_213, FILM_K, DRIVER_E) ///< reference xE2213KS0Ex
-#define eScreen_EPD_266_KS_0C SCREEN(SIZE_266, FILM_K, DRIVER_C) ///< reference xE2266KS0Cx
-#define eScreen_EPD_271_KS_09 SCREEN(SIZE_271, FILM_K, DRIVER_9) ///< reference xE2271KS09x
-#define eScreen_EPD_271_KS_0C SCREEN(SIZE_271, FILM_K, DRIVER_C) ///< reference xE2271KS0Cx
-#define eScreen_EPD_290_KS_0F SCREEN(SIZE_290, FILM_K, DRIVER_F) ///< reference xE2290KS0Fx
-/// @todo eScreen_EPD_350_KS_0C not tested
-#define eScreen_EPD_350_KS_0C SCREEN(SIZE_350, FILM_K, DRIVER_C) ///< reference xE2350KS0Cx)
-#define eScreen_EPD_370_KS_0C SCREEN(SIZE_370, FILM_K, DRIVER_C) ///< reference xE2370KS0Cx
-#define eScreen_EPD_417_KS_0D SCREEN(SIZE_417, FILM_K, DRIVER_D) ///< reference xE2417KS0Dx
-/// @todo eScreen_EPD_437_KS_0C not tested
-#define eScreen_EPD_437_KS_0C SCREEN(SIZE_437, FILM_K, DRIVER_C) ///< reference xE2437KS0Cx, not tested
+#define eScreen_EPD_150_KS_0J SCREEN(SIZE_150, FILM_K, DRIVER_J) ///< reference 150-KS-0J
+#define eScreen_EPD_152_KS_0J SCREEN(SIZE_152, FILM_K, DRIVER_J) ///< reference 152-KS-0J
+#define eScreen_EPD_154_KS_0C SCREEN(SIZE_154, FILM_K, DRIVER_C) ///< reference 154-KS-0C
+#define eScreen_EPD_206_KS_0E SCREEN(SIZE_206, FILM_K, DRIVER_E) ///< reference 206-KS-0E
+#define eScreen_EPD_213_KS_0E SCREEN(SIZE_213, FILM_K, DRIVER_E) ///< reference 213-KS-0E
+#define eScreen_EPD_266_KS_0C SCREEN(SIZE_266, FILM_K, DRIVER_C) ///< reference 266-KS-0C
+#define eScreen_EPD_271_KS_09 SCREEN(SIZE_271, FILM_K, DRIVER_9) ///< reference 271-KS-09
+#define eScreen_EPD_271_KS_0C SCREEN(SIZE_271, FILM_K, DRIVER_C) ///< reference 271-KS-0C
+#define eScreen_EPD_290_KS_0F SCREEN(SIZE_290, FILM_K, DRIVER_F) ///< reference 290-KS-0F
+#define eScreen_EPD_370_KS_0C SCREEN(SIZE_370, FILM_K, DRIVER_C) ///< reference 370-KS-0C
+#define eScreen_EPD_417_KS_0D SCREEN(SIZE_417, FILM_K, DRIVER_D) ///< reference 417-KS-0D
+#define eScreen_EPD_437_KS_0C SCREEN(SIZE_437, FILM_K, DRIVER_C) ///< reference 437-KS-0C
 /// @}
 
 ///
@@ -91,15 +89,16 @@
 #define DRIVER_EPD_VARIANT "Wide small"
 
 ///
-/// @brief small screens class
+/// @brief Wide small screens class
 ///
 class Pervasive_Wide_Small : public Driver_EPD_Virtual
 {
-public:
+  public:
+
     ///
     /// @brief Constructor
-    /// @param eScreen_EPD
-    /// @param board
+    /// @param eScreen_EPD_EXT3 size and model of the e-screen
+    /// @param board board configuration
     ///
     Pervasive_Wide_Small(eScreen_EPD_t eScreen_EPD, pins_t board);
 
@@ -145,7 +144,7 @@ private:
 
     // Variables and functions specific to the screen
     uint8_t COG_data[128]; // OTP // !!! 2 should be enough
-    bool s_flag50;
+    bool s_flag50; // Register 0x50
 
     void COG_reset();
     void COG_getDataOTP();
@@ -156,5 +155,4 @@ private:
     void COG_stopDCDC();
 };
 
-//
 #endif // DRIVER_WIDE_SMALL_RELEASE

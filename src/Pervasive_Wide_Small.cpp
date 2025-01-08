@@ -8,8 +8,9 @@
 //
 // Created by Rei Vilo, 21 Nov 2024
 //
-// Copyright (c) Rei Vilo, 2010-2024
+// Copyright (c) Pervasive Displays, 2010-2025
 // Licence All rights reserved
+// Portions (c) Rei Vilo, 2010-2025
 //
 // See Pervasive_Wide_Small.h for references
 //
@@ -33,9 +34,7 @@
 // === COG section
 //
 //
-
-//
-// --- Small screens with K film //
+// --- Small screens with K film
 //
 void Pervasive_Wide_Small::COG_reset()
 {
@@ -232,6 +231,10 @@ void Pervasive_Wide_Small::COG_getDataOTP()
     }
 
     u_flagOTP = true;
+
+#if (DEBUG_OTP == 1) // Debug COG_data
+    debugOTP(COG_data, u_readBytes, COG_WIDE_SMALL, SCREEN_DRIVER(u_eScreen_EPD));
+#endif // DEBUG_OTP
 }
 
 void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
@@ -483,8 +486,6 @@ void Pervasive_Wide_Small::updateFast(FRAMEBUFFER_CONST_TYPE frame, FRAMEBUFFER_
     COG_sendImageDataFast(frame, frame2, sizeFrame);
 
     COG_update(UPDATE_FAST); // Update
-    COG_stopDCDC(); // Power off
-
-    // hV_HAL_SPI_end(); // With unicity check
+    COG_stopDCDC(); // Power DC/DC off
 }
 
