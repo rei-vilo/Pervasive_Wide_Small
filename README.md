@@ -23,6 +23,8 @@ the development kits
 
 The driver library can be used stand-alone or with the [Pervasive Displays Library Suite](https://pdls.pervasivedisplays.com/userguide/index.html). 
 
+**Note**: This library requires [PDLS Common](https://github.com/PervasiveDisplays/PDLS_Common).
+
 ## Documentation
 
 * [Application Note for 1.52" of wide temperature EPDs](https://www.pervasivedisplays.com/wp-content/uploads/2023/12/ApplicationNote_1.52-inch_wide-Temperature_EPD_v01_20231225_A.pdf)
