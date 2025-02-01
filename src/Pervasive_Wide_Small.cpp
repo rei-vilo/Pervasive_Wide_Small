@@ -25,6 +25,7 @@
 // Release 802: Refactored CoG functions
 // Release 900: Added new driver library
 // Release 901: Added support for screen 340-KS-0G
+// Release 903: Removed unlisted screens
 //
 
 // Header
@@ -154,7 +155,6 @@ void Pervasive_Wide_Small::COG_getDataOTP()
     case eScreen_EPD_154_KS_0C:
     case eScreen_EPD_266_KS_0C:
     case eScreen_EPD_271_KS_0C: // 2.71(A)
-    case eScreen_EPD_350_KS_0C:
     case eScreen_EPD_370_KS_0C:
 
         offsetPSR = (bank == 0) ? 0x0fb4 : 0x1fb4;

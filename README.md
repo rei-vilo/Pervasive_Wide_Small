@@ -6,7 +6,7 @@ The driver is specifically designed for the [Pervasive Displays](https://www.per
 
 The **Pervasive_Wide_Small** supports the screens
 
-* Pervasive Displays iTC monochrome [with wide temperature and embedded fast update](https://www.pervasivedisplays.com/products-e-ink-display/?_sft_etc_itc=pu&_sft_temperature_range=m15c-to-p60c&_sft_product_colour=black-white) (film `K`) with sizes of 1.52, 1.54, 2.06, 2.13, 2.66, 2.71, 2.90, 3.70, and 4.17" and 4.37"; 
+* Pervasive Displays iTC monochrome [with wide temperature and embedded fast update](https://www.pervasivedisplays.com/products-e-ink-display/?_sft_etc_itc=pu&_sft_temperature_range=m15c-to-p60c&_sft_product_colour=black-white) (film `K`) with sizes of 1.52, 1.54, 2.06, 2.13, 2.66, 2.71, 2.90, 3.70, 4.17" and 4.37"; 
 
 the extension boards
 
