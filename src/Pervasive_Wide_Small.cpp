@@ -156,7 +156,8 @@ void Pervasive_Wide_Small::COG_getDataOTP()
     case eScreen_EPD_266_KS_0C:
     case eScreen_EPD_271_KS_0C: // 2.71(A)
     case eScreen_EPD_370_KS_0C:
-
+	case eScreen_EPD_437_KS_0C:
+	
         offsetPSR = (bank == 0) ? 0x0fb4 : 0x1fb4;
         offsetA5 = (bank == 0) ? 0x0000 : 0x1000;
         break;
