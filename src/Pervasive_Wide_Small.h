@@ -143,7 +143,7 @@ protected:
 private:
 
     // Variables and functions specific to the screen
-    uint8_t COG_data[128]; // OTP // !!! 2 should be enough
+    uint8_t COG_data[2]; // OTP
     bool s_flag50; // Register 0x50
 
     void COG_reset();
