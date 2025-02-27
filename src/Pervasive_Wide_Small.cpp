@@ -26,6 +26,7 @@
 // Release 900: Added new driver library
 // Release 901: Added support for screen 340-KS-0G
 // Release 903: Removed unlisted screens
+// Release 904: Fixed OTP array size
 //
 
 // Header

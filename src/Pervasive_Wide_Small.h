@@ -6,8 +6,8 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Jan 2025
-/// @version 903
+/// @date 21 Feb 2025
+/// @version 904
 ///
 /// @copyright (c) Pervasive Displays, 2010-2025
 /// @copyright All rights reserved
@@ -50,7 +50,7 @@
 ///
 /// @brief Library release number
 ///
-#define DRIVER_WIDE_SMALL_RELEASE 903
+#define DRIVER_WIDE_SMALL_RELEASE 904
 
 ///
 /// @name List of supported screens
