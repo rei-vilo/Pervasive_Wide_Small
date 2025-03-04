@@ -26,6 +26,7 @@
 // Release 900: Added new driver library
 // Release 901: Added support for screen 340-KS-0G
 // Release 903: Removed unlisted screens
+// Release 904: Fixed OTP array size
 //
 
 // Header
@@ -156,7 +157,7 @@ void Pervasive_Wide_Small::COG_getDataOTP()
     case eScreen_EPD_266_KS_0C:
     case eScreen_EPD_271_KS_0C: // 2.71(A)
     case eScreen_EPD_370_KS_0C:
-	case eScreen_EPD_437_KS_0C:
+    case eScreen_EPD_437_KS_0C:
 	
         offsetPSR = (bank == 0) ? 0x0fb4 : 0x1fb4;
         offsetA5 = (bank == 0) ? 0x0000 : 0x1000;
@@ -271,7 +272,7 @@ void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
         uint8_t indexTemperature; // Temperature
         uint8_t index00_work[2]; // PSR
 
-        // FILM_P and FILM_K already checked
+        // FILM_K already checked
         if (updateMode != UPDATE_NORMAL) // Specific settings for fast update
         {
             indexTemperature = u_temperature | 0x40; // temperature | 0x40
@@ -294,18 +295,20 @@ void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
         switch (u_eScreen_EPD)
         {
         case eScreen_EPD_290_KS_0F: // No PSR
+
             b_sendCommandData8(0x4d, 0x55);
             b_sendCommandData8(0xe9, 0x02);
             break;
 
         default:
+
             b_sendIndexData(0x00, index00_work, 2); // PSR
             break;
         }
 
 
         // Specific settings for fast update, all screens
-        // FILM_P and FILM_K already checked
+        // FILM_K already checked
         if (updateMode != UPDATE_NORMAL)
         {
             b_sendCommandData8(0x50, 0x07); // Vcom and data interval setting
@@ -424,9 +427,8 @@ void Pervasive_Wide_Small::COG_stopDCDC()
     }
 }
 //
-// --- End of Small screens with K film //
+// --- End of Small screens with K film
 //
-/// @endcond
 //
 // === End of COG section
 //
