@@ -237,6 +237,8 @@ void Pervasive_Wide_Small::COG_getDataOTP()
 #if (DEBUG_OTP == 1) // Debug COG_data
     debugOTP(COG_data, u_readBytes, COG_WIDE_SMALL, SCREEN_DRIVER(u_eScreen_EPD));
 #endif // DEBUG_OTP
+
+	hV_HAL_SPI3_end();
 }
 
 void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
