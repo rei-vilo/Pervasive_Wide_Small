@@ -138,9 +138,9 @@ class Pervasive_Wide_Small : public Driver_EPD_Virtual
 
     /// @}
 
-protected:
+  protected:
 
-private:
+  private:
 
     // Variables and functions specific to the screen
     uint8_t COG_data[2]; // OTP
