@@ -101,7 +101,7 @@ void Pervasive_Wide_Small::COG_getDataOTP()
         case eScreen_EPD_290_KS_0F:
 
             u_flagOTP = true;
-            mySerial.println("hV . OTP check passed - embedded PSR");
+            hV_HAL_log(LEVEL_INFO, "OTP check passed - no embedded PSR");
             return; // No PSR
             break;
 
