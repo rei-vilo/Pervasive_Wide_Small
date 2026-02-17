@@ -6,11 +6,9 @@
 // Project Pervasive Displays Library Suite
 // Based on highView technology
 //
-// Created by Rei Vilo, 21 Nov 2024
-//
-// Copyright (c) Pervasive Displays, 2010-2025
+// Copyright (c) Pervasive Displays Inc., 2021-2025
 // Licence All rights reserved
-// Portions (c) Rei Vilo, 2010-2025
+
 //
 // See Pervasive_Wide_Small.h for references
 //
@@ -232,13 +230,12 @@ void Pervasive_Wide_Small::COG_getDataOTP()
         hV_HAL_GPIO_set(b_pin.panelCS); // Unselect
     }
 
+    hV_HAL_SPI3_end();
     u_flagOTP = true;
 
 #if (DEBUG_OTP == 1) // Debug COG_data
     debugOTP(COG_data, u_readBytes, COG_WIDE_SMALL, SCREEN_DRIVER(u_eScreen_EPD));
 #endif // DEBUG_OTP
-
-    hV_HAL_SPI3_end();
 }
 
 void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
