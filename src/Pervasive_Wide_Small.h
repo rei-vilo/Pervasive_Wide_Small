@@ -6,7 +6,7 @@
 /// @n Based on highView technology
 ///
 /// @date 9 June 2026
-/// @version 905
+/// @version 906
 ///
 /// @copyright (c) Pervasive Displays Inc., 2021-2026
 /// @copyright All rights reserved
@@ -38,8 +38,8 @@
 // SDK and configuration
 #include "PDLS_Common.h"
 
-#if (PDLS_COMMON_RELEASE < 902)
-#error Required PDLS_COMMON_RELEASE 902
+#if (PDLS_COMMON_RELEASE < 1008)
+#error Required PDLS_COMMON_RELEASE 1008
 #endif // PDLS_COMMON_RELEASE
 
 // Driver
@@ -49,7 +49,7 @@
 ///
 /// @brief Library release number
 ///
-#define DRIVER_WIDE_SMALL_RELEASE 905
+#define DRIVER_WIDE_SMALL_RELEASE 906
 
 ///
 /// @name List of supported screens
@@ -68,6 +68,7 @@
 #define eScreen_EPD_271_KS_09 SCREEN(SIZE_271, FILM_K, DRIVER_9) ///< reference 271-KS-09
 #define eScreen_EPD_271_KS_0C SCREEN(SIZE_271, FILM_K, DRIVER_C) ///< reference 271-KS-0C
 #define eScreen_EPD_290_KS_0F SCREEN(SIZE_290, FILM_K, DRIVER_F) ///< reference 290-KS-0F
+#define eScreen_EPD_290_KS_06 SCREEN(SIZE_290, FILM_K, DRIVER_6) ///< reference 290-KS-06
 #define eScreen_EPD_370_KS_0C SCREEN(SIZE_370, FILM_K, DRIVER_C) ///< reference 370-KS-0C
 #define eScreen_EPD_417_KS_0D SCREEN(SIZE_417, FILM_K, DRIVER_D) ///< reference 417-KS-0D
 #define eScreen_EPD_437_KS_0C SCREEN(SIZE_437, FILM_K, DRIVER_C) ///< reference 437-KS-0C
