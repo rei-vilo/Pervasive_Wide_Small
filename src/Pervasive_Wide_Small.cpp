@@ -47,7 +47,7 @@ void Pervasive_Wide_Small::COG_reset()
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             if (hV_HAL_GPIO_get(b_pin.panelBusy) == HIGH)
             {
@@ -99,7 +99,7 @@ void Pervasive_Wide_Small::COG_getDataOTP()
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
         case eScreen_EPD_290_KS_0F:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             u_flagOTP = true;
             hV_HAL_log(LEVEL_INFO, "OTP check passed - no embedded PSR");
@@ -248,7 +248,7 @@ void Pervasive_Wide_Small::COG_initial(uint8_t updateMode)
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             // Soft reset
             b_sendCommand8(0x12);
@@ -334,7 +334,7 @@ void Pervasive_Wide_Small::COG_sendImageDataNormal(FRAMEBUFFER_CONST_TYPE firstF
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             b_sendIndexData(0x24, firstFrame, sizeFrame); // Next frame, blackBuffer
             b_sendIndexFixed(0x26, 0x00, sizeFrame); // Previous frame, 0x00
@@ -362,7 +362,7 @@ void Pervasive_Wide_Small::COG_sendImageDataFast(FRAMEBUFFER_CONST_TYPE firstFra
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             b_sendIndexData(0x24, secondFrame, sizeFrame); // Next frame, blackBuffer
             b_sendIndexData(0x26, firstFrame, sizeFrame); // Previous frame, 0x00
@@ -394,7 +394,7 @@ void Pervasive_Wide_Small::COG_update(uint8_t updateMode)
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             b_waitBusy(LOW); // 152 specific
             b_sendCommand8(0x20); // Display Refresh
@@ -422,7 +422,7 @@ void Pervasive_Wide_Small::COG_stopDCDC()
     {
         case eScreen_EPD_150_KS_0J:
         case eScreen_EPD_152_KS_0J:
-		case eScreen_EPD_290_KS_06:
+        case eScreen_EPD_290_KS_06:
 
             break;
 
@@ -432,11 +432,11 @@ void Pervasive_Wide_Small::COG_stopDCDC()
             b_waitBusy();
             break;
     }
-	
-	// Additional steps for Power OFF
-	// clear D/C, RESET, CS, SPI pins to LOW
-	// keep BUSY floating
-	// cut Vcc off
+
+    // Additional steps for Power OFF
+    // clear D/C, RESET, CS, SPI pins to LOW
+    // keep BUSY floating
+    // cut Vcc off
 }
 //
 // --- End of Small screens with K film
