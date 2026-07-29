@@ -27,6 +27,8 @@
 // Release 904: Fixed OTP array size
 // Release 905: Minor fixes
 // Release 906: Added support for screen 290-KS-06
+// Release 1000: Synchronised with PDLS_Common
+//
 
 // Header
 #include "Pervasive_Wide_Small.h"
