@@ -77,9 +77,9 @@ void Pervasive_Wide_Small::COG_getDataOTP()
     // Additional settings for fast update, 154 206 213 266 271A 370 and 437 screens (s_flag50)
     switch (u_eScreen_EPD)
     {
-		case eScreen_EPD_097_KS_0E:
-		case eScreen_EPD_154_KS_0C:
-		case eScreen_EPD_206_KS_0E:
+        case eScreen_EPD_097_KS_0E:
+        case eScreen_EPD_154_KS_0C:
+        case eScreen_EPD_206_KS_0E:
         case eScreen_EPD_213_KS_0E:
         case eScreen_EPD_266_KS_0C:
         case eScreen_EPD_271_KS_0C: // 2.71(A)
@@ -166,8 +166,8 @@ void Pervasive_Wide_Small::COG_getDataOTP()
             offsetA5 = (bank == 0) ? 0x0000 : 0x1000;
             break;
 
-		case eScreen_EPD_097_KS_0E:
-		case eScreen_EPD_206_KS_0E:
+        case eScreen_EPD_097_KS_0E:
+        case eScreen_EPD_206_KS_0E:
         case eScreen_EPD_213_KS_0E:
 
             offsetPSR = (bank == 0) ? 0x0b1b : 0x171b;
