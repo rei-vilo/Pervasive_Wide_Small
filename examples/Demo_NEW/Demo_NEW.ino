@@ -1,12 +1,12 @@
 #include "Pervasive_Wide_Small.h"
 
 // DEMO Image Set <Comment out when in User Mode>
-// Screen Size: 152, 154, 206, 213, 266, 271, 290, 370, 417, 437
-#define SCRN 152
+// Screen Size: 97, 152, 154, 206, 213, 266, 271, 290, 370, 417, 437
+#define SCRN 97
 #include "globalupdate_src/demoImageData.h"
 #include "fastupdate_src/demoImageData.h"
 
-Pervasive_Wide_Small myDriver(eScreen_EPD_152_KS_0J, boardRaspberryPiPico_RP2040);
+Pervasive_Wide_Small myDriver(eScreen_EPD_097_KS_0E, boardRaspberryPiPico_RP2040);
 
 void setup()
 {
@@ -15,6 +15,8 @@ void setup()
     myDriver.begin();
 
     myDriver.updateNormal(BW_monoBuffer, frameSize);
+
+    hV_HAL_delayMilliseconds(2000);
 
     myDriver.updateFast(FastPic_w, FastPic_1, frameSize);
     myDriver.updateFast(FastPic_b, FastPic_w, frameSize);
