@@ -4,7 +4,12 @@
 */
 
 // Load Global Update Images
-#if (SCRN==152)   //1.52"
+#if (SCRN==97)
+#include "image_data/0.97/97_1.c"
+#define frameSize	2400
+#define BW_monoBuffer        (uint8_t *) & x97_BW
+#define BW_0x00Buffer        (uint8_t *) & image_200X96_white
+#elif (SCRN==152)   //1.52"
 #include "image_data/1.52/152_1.c"
 #include "image_data/1.52/white.c"
 #define frameSize	5000

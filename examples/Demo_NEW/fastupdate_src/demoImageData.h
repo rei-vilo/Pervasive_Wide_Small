@@ -4,7 +4,9 @@
 */
 
 // Load Global Update Images
-#if (SCRN==152)   //1.52"
+#if (SCRN==97)   //0.97"
+#include "fp_data/097/FuPu_Data.h"
+#elif (SCRN==152)   //1.52"
 #include "fp_data/152/FuPu_Data.h"
 #elif (SCRN==154)   //1.54"
 #include "fp_data/154/FuPu_Data.h"

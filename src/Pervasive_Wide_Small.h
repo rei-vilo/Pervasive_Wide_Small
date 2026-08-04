@@ -5,8 +5,8 @@
 /// @details Project Pervasive Displays Library Suite
 /// @n Based on highView technology
 ///
-/// @date 9 June 2026
-/// @version 1000
+/// @date 3 August 2026
+/// @version 1001
 ///
 /// @copyright (c) Pervasive Displays Inc., 2021-2026
 /// @copyright All rights reserved
@@ -49,7 +49,7 @@
 ///
 /// @brief Library release number
 ///
-#define DRIVER_WIDE_SMALL_RELEASE 1000
+#define DRIVER_WIDE_SMALL_RELEASE 1001
 
 ///
 /// @name List of supported screens
@@ -59,6 +59,7 @@
 /// @see https://www.pervasivedisplays.com/products-e-ink-display/?_sft_etc_itc=pu%20itc&_sft_temperature_range=m15c-to-p60c
 /// @{
 ///
+#define eScreen_EPD_097_KS_0E SCREEN(SIZE_097, FILM_K, DRIVER_E) ///< reference 097-KS-0E
 #define eScreen_EPD_150_KS_0J SCREEN(SIZE_150, FILM_K, DRIVER_J) ///< reference 150-KS-0J
 #define eScreen_EPD_152_KS_0J SCREEN(SIZE_152, FILM_K, DRIVER_J) ///< reference 152-KS-0J
 #define eScreen_EPD_154_KS_0C SCREEN(SIZE_154, FILM_K, DRIVER_C) ///< reference 154-KS-0C
