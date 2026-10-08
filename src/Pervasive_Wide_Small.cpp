@@ -28,6 +28,7 @@
 // Release 905: Minor fixes
 // Release 906: Added support for screen 290-KS-06
 // Release 1001: Added support for screen 097-KS-0E
+// Release 1011: Improved trace granualarity
 
 // Header
 #include "Pervasive_Wide_Small.h"
@@ -52,7 +53,7 @@ void Pervasive_Wide_Small::COG_reset()
 
             if (hV_HAL_GPIO_get(b_pin.panelBusy) == HIGH)
             {
-                hV_HAL_Serial_crlf();
+                hV_HAL_log_crlf();
                 hV_HAL_log(LEVEL_CRITICAL, "Incorrect type for 1.52-Wide");
                 hV_HAL_exit(0x01);
             }
@@ -181,7 +182,7 @@ void Pervasive_Wide_Small::COG_getDataOTP()
             break;
 
         default:
-            hV_HAL_Serial_crlf();
+            hV_HAL_log_crlf();
             hV_HAL_log(LEVEL_CRITICAL, "OTP check failed - Screen %i-%cS-0%c not supported", SCREEN_SIZE(u_eScreen_EPD), SCREEN_FILM(u_eScreen_EPD), SCREEN_DRIVER(u_eScreen_EPD));
             hV_HAL_exit(0x01);
             break;
@@ -203,7 +204,7 @@ void Pervasive_Wide_Small::COG_getDataOTP()
 
         if (ui8 != 0xa5)
         {
-            hV_HAL_Serial_crlf();
+            hV_HAL_log_crlf();
             hV_HAL_log(LEVEL_CRITICAL, "OTP check failed - Bank %i, first 0x%02x, expected 0x%02x", bank, ui8, 0xa5);
             hV_HAL_exit(0x01);
         }
